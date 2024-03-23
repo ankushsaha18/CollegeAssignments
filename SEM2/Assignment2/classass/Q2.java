@@ -12,8 +12,7 @@ public class Q2 {
 		System.out.println("Enter 2nd complex number--");
 		o2.setData();
 		o2.display();
-		Complex o3=new Complex();
-		o3=o3.add(o1, o2);
+		Complex o3=new Complex().add(o1, o2);
 		System.out.print("The sum is: ");
 		o3.display();
 	}
