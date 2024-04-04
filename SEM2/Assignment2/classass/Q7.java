@@ -7,7 +7,6 @@ public class Q7 {
 		Person3 obj=new Person3();
 		obj.name="Ankush";
 		obj.display();
-		System.out.println("Number of letters:"+obj.count());
 	}
 
 }
@@ -20,6 +19,7 @@ class Person3 implements DetailInfo{
 	String name;
 	public void display() {
 		System.out.println("Name is:"+name);
+		System.out.println("Number of letters:"+count());
 	}
 	public int count() {
 		return name.length();
