@@ -1,4 +1,4 @@
-package homeass.java;
+package homeass;
 import java.util.Scanner;
 public class Q1 {
 
@@ -8,7 +8,7 @@ public class Q1 {
 		System.out.print("Enter Sales Amount:");
 		double sales=sc.nextDouble();
 		Commision com=new Commision(sales);
-			System.out.println("Commision Amount is:"+com.getCommision());
+		System.out.println("Commission Amount is:"+com.getCommision());
 	}
 
 }

@@ -17,7 +17,7 @@ public class Q3 {
 		for(Product i:bill) {
 			i.display();
 		}
-		System.out.println("Your total bill is: Rs."+Product.totalAmt(bill));
+		System.out.println("Your total bill is: Rs."+Product.totalPrice);
 	}
 
 }
@@ -30,14 +30,10 @@ class Product{
 		this.PID=PID;
 		this.price=price;
 		this.qty=qty;
+		totalPrice += this.price * this.qty;
 	}
 	void display() {
+
 		System.out.println(PID+"\t"+price+"\t   "+qty);
-	}
-	static double totalAmt(Product bill[]) {
-		for(Product i:bill) {
-			totalPrice+=i.price*i.qty;
-		}
-		return totalPrice;
 	}
 }
