@@ -1,21 +1,19 @@
-package classass;
-
-public class Q2 {
+public class Q3c {
     public static void main(String[] args) {
-        String[] colors = {"Red","Blue","Green"};
+        String[] Animals = {"Lion","Tiger","Elephant","Rhino"};
         try{
-            colors[3] = "white";
+            Animals[4] = "Giraffe";
         }catch (ArrayIndexOutOfBoundsException e){
             System.out.println(e.getMessage());
         }
         try{
-            int a = Integer.parseInt(colors[0]);
+            int a = Integer.parseInt(Animals[0]);
         }catch (NumberFormatException e){
             System.out.println(e.getMessage());
         }
         try {
-            colors = null;
-            System.out.println(colors[0]);
+            Animals = null;
+            System.out.println(Animals[0]);
         }catch (NullPointerException e) {
             System.out.println(e.getMessage());
         }
