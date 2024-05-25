@@ -3,9 +3,10 @@ class Node {
     protected int regd_no;
     protected float mark;
     protected Node next;
+    protected Node prev;
 }
 
-public class LinkedList {
+public class DoublyLinkedList {
     public static Node create(Node start) {
         Scanner sc=new Scanner(System.in);
         Node p;
@@ -22,6 +23,7 @@ public class LinkedList {
                 start = p;
             }
             else {
+                p.prev = q;
                 q.next=p;
             }
             q = p;
@@ -53,6 +55,9 @@ public class LinkedList {
         System.out.print("Enter marks: ");
         p.mark=sc.nextInt();
         p.next = start;
+        if(start != null){
+            start.prev = p;
+        }
         start = p;
         return start;
     }
@@ -73,6 +78,7 @@ public class LinkedList {
             while(q.next!=null) {
                 q = q.next;
             }
+            p.prev = q;
             q.next = p;
         }
         return start;
@@ -89,8 +95,13 @@ public class LinkedList {
         if(pos <= 0) {
             System.out.println("Position does not exit in LinkedList");
         }
-        else if(start == null || pos == 1) {
+        else if(start == null) {
+            p.next = null;
+            start = p;
+            System.out.println("Node added at first position");
+        } else if(pos == 1) {
             p.next = start;
+            start.prev = p;
             start = p;
             System.out.println("Node added at first position");
         } else {
@@ -99,9 +110,12 @@ public class LinkedList {
                 q = q.next;
             }
             if(q.next == null){
+                p.prev = q;
                 q.next = p;
             }else{
                 p.next = q.next;
+                q.next.prev = p;
+                p.prev = q;
                 q.next = p;
                 System.out.println("New node added at " + pos + " position");
             }
@@ -115,6 +129,9 @@ public class LinkedList {
         } else {
             Node p = start;
             start = start.next;
+            if(start != null){
+                start.prev = null;
+            }
             System.out.println("Deleted node information\nReg.no --- marks");
             System.out.println(p.regd_no+"---------"+p.mark);
         }
@@ -129,6 +146,7 @@ public class LinkedList {
             while(p.next.next != null) {
                 p = p.next;
             }
+            p.next.prev = null;
             p.next = null;
             System.out.println("Deleted node information\nReg.no --- marks");
             System.out.println(p.regd_no+"---------"+p.mark);
@@ -144,6 +162,9 @@ public class LinkedList {
             System.out.println("Empty LinkedList, deletion not possible");
         } else if(pos == 1) {
             Node q = start;
+            if(start.next != null){
+                start.next.prev = null;
+            }
             start = start.next;
             System.out.println("Deleted node info-- registration no: "+q.regd_no+" and mark: "+q.mark);
         } else {
@@ -153,6 +174,7 @@ public class LinkedList {
             }
             System.out.println("Deleted node info-- registration no: " + p.next.regd_no + " and mark: " + p.next.mark);
             p.next = p.next.next;
+            p.next.prev = p;
         }
         return start;
     }
@@ -187,14 +209,15 @@ public class LinkedList {
     }
     public static Node reverse(Node start) {
         Node curr = start;
-        Node prev = null;
+        Node previous = null;
         while (curr != null){
             Node nextNode = curr.next;
-            curr.next = prev;
-            prev = curr;
+            curr.next = previous;
+            curr.prev = nextNode;
+            previous = curr;
             curr = nextNode;
         }
-        start = prev;
+        start = previous;
         System.out.println("LinkedList reversed");
         return start;
     }
@@ -293,4 +316,3 @@ public class LinkedList {
         }
     }
 }
-
