@@ -1,4 +1,4 @@
-package First_Lab;
+package Lab1;
 import java.util.Arrays;
 
 public class RotateArrayRight {

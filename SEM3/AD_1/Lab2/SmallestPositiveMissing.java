@@ -1,4 +1,4 @@
-package Second_Lab;
+package Lab2;
 
 public class SmallestPositiveMissing {
     public static void main(String[] args) {
@@ -9,8 +9,8 @@ public class SmallestPositiveMissing {
         int ans = Integer.MAX_VALUE;
         for(int i = 1 ; i < arr.length ; i++){
             boolean found = false;
-            for (int k : arr) {
-                if (k == i) {
+            for(int j = 0 ; j < arr.length ; j++){
+                if(arr[j] == i){
                     found = true;
                     break;
                 }

@@ -1,8 +1,8 @@
-package Second_Lab;
+package Lab2;
 
 public class NthFibonacciNumber {
     public static void main(String[] args) {
-        int n = 3;
+        int n = 8;
         System.out.println(fibonacci(n));
     }
     public static int fibonacci(int n){
@@ -12,7 +12,7 @@ public class NthFibonacciNumber {
         int a = 0;
         int b = 1;
         int c;
-        for(int i = 2 ; i <= n ; i++){
+        for(int i = 3 ; i <= n ; i++){
             c = a+b;
             a = b;
             b = c;

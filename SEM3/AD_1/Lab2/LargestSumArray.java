@@ -1,4 +1,4 @@
-package Second_Lab;
+package Lab2;
 
 public class LargestSumArray {
     public static void main(String[] args) {

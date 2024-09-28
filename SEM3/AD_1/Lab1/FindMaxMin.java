@@ -1,4 +1,4 @@
-package First_Lab;
+package Lab1;
 
 public class FindMaxMin {
     public static void main(String[] args) {
