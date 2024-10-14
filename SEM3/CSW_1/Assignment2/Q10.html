@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 10</title>
+        <style>
+            body {
+                font-family: Arial;
+            }
+            .form-container {
+                width: 400px;
+                margin: 50px auto;
+                background-color: gray;
+                padding: 20px;
+                border-radius:10px;
+            }
+            .logo-container {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .logo-container img {
+                width: 100px;
+            }
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            select {
+                width: 95%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            .radio-group {
+                margin: 10px 0;
+            }
+            .radio-group label {
+                margin-right: 20px;
+                font-size: 16px;
+            }
+            input[type="submit"] {
+                width: 100%;
+                padding: 12px;
+                background-color: burlywood;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <div class="logo-container">
+                <img src="soa.png">
+            </div>
+            <h2 align="center">Registration Form</h2>
+            <form action="submit.php">
+                <label for="name"><b>Full Name</b></label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name">
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+
+                <div class="radio-group">
+                    <label><b>Gender:</b></label>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+
+                <label for="branch"><b>Branch</b></label>
+                <select id="branch" name="branch">
+                    <option value="">Select Your Branch</option>
+                    <option value="CSE">CSE</option>
+                    <option value="CSIT">CSIT</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="CE">CE</option>
+                    <option value="ME">ME</option>
+                </select>
+
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </body>
+</html>
