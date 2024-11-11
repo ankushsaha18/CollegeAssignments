@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<title>Q3</title>
+    		<script src="jQuery.js"></script>
+		<script>
+        		$(document).ready(function() {
+				$("#start").click(function(){
+					$("#box").animate({width: "400px"},2000);
+				});
+				$("#stop").click(function(){
+					$("#box").stop();
+				});
+            		});
+    		</script>
+    		<style>
+			#box{
+				height: 100px;
+				width: 100px;
+				background-color: lightgreen;
+				border: 2px solid black;
+			}
+			#bt{
+				margin:200px 600px;
+			}
+			button{
+				margin: 40px;
+			}
+            	</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<div id="bt">
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+		</div>
+   	</body>
+</html>

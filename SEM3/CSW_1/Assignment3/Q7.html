@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<script src="jQuery.js"></script>
+    		<script>
+        		$(document).ready(function() {
+            			$("#submit").click(function() {
+               				 $("table").append("<tr>" +
+                    				"<td>"+$("#name").val()+"</td>" +
+                    				"<td>"+$("#regd").val()+"</td>" +
+                   				"<td>"+$("#br").val()+"</td>" +
+                    				"<td>"+$("#sec").val()+"</td>" +
+                    				"</tr>");
+            			});
+				$("#clr").click(function(){
+					$("table").css("color","red");
+				});
+        		});
+   		 </script>
+    		<style>
+        		table, th, td {
+           			 border: 2px solid black;
+            			border-collapse: collapse;
+        		}
+        		th {
+           			background-color: gray;
+       			}
+        		table {
+            			width: 100%;
+            			text-align: center;
+        		}
+			div{
+				margin-top: 30px;
+			}
+			button{
+				height: 50px;
+				width: 200px;
+				margin: 30px 630px;
+			}
+    		</style>
+	</head>
+	<body>
+    		<table>
+        		<tr>
+            			<th>Name</th>
+            			<th>Registration Number</th>
+            			<th>Branch</th>
+            			<th>Section</th>
+       			 </tr>
+        		<tr>
+            			<td>Ankush Saha</td>
+            			<td>2341019012</td>
+            			<td>CSE</td>
+            			<td>23412L2</td>
+        		</tr>
+    		</table>
+		<div>
+			<label for="name">Name: </label>
+			<input id="name" type="text" name="name">
+			<label for="regd">Registration Number:</label>
+			<input type="number" id="regd" name="regd">
+			<label for="br">Branch:</label>
+			<input type="text" id="br" name="br">
+			<label for="sec">Section:</label>
+			<input type="text" id="sec" name="sec">
+		</div>
+    		<button id="submit">Add Row</button>
+		<button id="clr">Chage Color</button>
+	</body>
+</html>

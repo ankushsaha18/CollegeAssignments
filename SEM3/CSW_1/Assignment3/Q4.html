@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<title>Q4</title>
+    		<script src="jQuery.js"></script>
+		<script>
+        		$(document).ready(function() {
+				$("#txt").click(function(){
+					alert("Text:  " + $("p").text());
+				});
+				$("#htm").click(function(){
+					alert("HTML:  " + $("p").html());
+				});
+            		});
+    		</script>
+    		<style>
+			
+            	</style>
+	</head>
+	<body>
+		<p>This is a paragraph. Click below buttons to perform the functions respectively</p>
+		<button id="txt">Fetch Text</button>
+		<button id="htm">Fetch HTML</button>
+   	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<title>Q10</title>
+    		<script src="jQuery.js"></script>
+		<script>
+    			$(document).ready(function() {
+        			$("button").click(function(e){
+					e.preventDefault();
+					if($("#username").val()  == "" || $("#email").val() == "" || $("#password").val() == ""){
+						$(".error").css("color","red");
+						$(".error").text("Input Fields can not be Empty!!");
+						return false;
+                			}else if (!IsEmail($("#email").val())) {
+                    				$(".error").text("Entered Email is not Valid!!");
+                    				$(".error").css("color", "red");
+						return false;
+                			}else{
+						$(".error").text("");
+						return true;
+					}
+				});
+           		});
+			function IsEmail(email) {
+            			const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            			return regex.test(email);
+        		}
+		</script>
+    		<style>
+        		.form-container {
+            			width: 400px;
+            			margin: auto;
+            			padding: 20px;
+				border: 1px solid grey;
+            			border-radius: 5px;
+        		}
+        		input[type="text"],
+        		input[type="email"],
+        		input[type="password"] {
+            			width: 95%;
+            			padding: 10px;
+            			margin: 10px 0;
+            			border: 1px solid grey;
+            			border-radius: 5px;
+        		}
+        		button {
+            			width: 100%;
+            			padding: 10px;
+            			background: gold;
+				border: none;
+            			border-radius: 5px;
+        		}
+    		</style>
+	</head>
+	<body>
+		<div class="form-container">
+    			<h2>Sign Up</h2>
+    			<form id="signupForm">
+        			<input type="text" id="username" placeholder="Username">
+       				<input type="email" id="email" placeholder="Email">
+        			<input type="password" id="password" placeholder="Password">
+				<p class="error"></p>
+        			<button>Sign Up</button>
+    			</form>
+		</div>
+	</body>
+</html>

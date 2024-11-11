@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<title>Q9</title>
+    		<script src="jQuery.js"></script>
+		<script>
+        		$(document).ready(function() {
+				$("#show").click(function(){
+					$("div").fadeIn();
+				});
+				$("#ok").click(function(){
+					$("div").fadeOut();
+				});
+        		});
+    		</script>
+    		<style>
+			div{
+				height: 100px;
+				width: 400px;
+				border: 2px solid balck;
+				border-radius: 10px;
+				display: none;	
+				margin-left: 500px;
+				background-color: grey;
+				padding: 20px;
+			}
+			#ok{
+				display: block;
+				margin-top: 50px;
+				margin-left: 290px;
+				height: 30px;
+				width: 70px;
+				border: 2px solid lightblue;
+				border-radius: 10px;
+				background-color: lightblue;
+			}
+    		</style>
+	</head>
+	<body>
+		<div>
+			This is Your Alert Message
+			<button id="ok">OK</button>
+		</div>
+		<button id="show">Click for Alert Mesage</button>
+	</body>
+</html>

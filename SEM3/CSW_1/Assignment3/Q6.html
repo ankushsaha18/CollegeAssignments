@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<title>Q6</title>
+    		<script src="jQuery.js"></script>
+		<script>
+        		$(document).ready(function() {
+            			$("#hlg").click(function(){
+					$("div").removeClass("dim");
+					$("div").addClass("highlight");
+				});
+				$("#dm").click(function(){
+					$("div").removeClass("highlight");
+					$("div").addClass("dim");
+				});
+        		});
+    		</script>
+    		<style>
+			div{
+				height:100px;
+				display: block;
+				margin: 100px 50px;
+				border: 2px solid black;
+			}
+			.highlight{
+				background-color: yellow;
+			}
+			.dim{
+				background-color: yellow;
+				opacity: 0.5;
+			}
+            	</style>
+	</head>
+	<body>
+		<div></div>
+		<button id="hlg">Add Highlight</button>
+		<button id="dm">Add Dim</button>
+   	</body>
+</html>

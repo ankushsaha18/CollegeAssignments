@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<title>Q1</title>
+    		<script src="jQuery.js"></script>
+		<script>
+        		$(document).ready(function() {
+            			$("#red").click(function() {
+                			$("body").css("background-color", "red");
+            			});
+            			$("#blue").click(function() {
+                			$('body').css("background-color", "blue");
+            			});
+            			$("#green").click(function() {
+                			$('body').css("background-color", "green");
+            			});
+            			$("#toggleDivs").click(function() {
+                			$("div").toggle();
+            			});
+        		});
+    		</script>
+    		<style>
+			#red{
+				margin-left: 610px;
+			}
+			button{
+				margin-right: 30px;
+			}
+			div{
+				margin: 10px 0;
+    				padding: 15px;
+   				border: 1px solid black;
+    				display: block;
+				text-align: center;
+			}
+            	</style>
+	</head>
+	<body>
+    		<h1 align="center">Change Background Color</h1>
+    		<button id="red">Red</button>
+    		<button id="blue">Blue</button>
+    		<button id="green">Green</button>
+    		<button id="toggleDivs">Toggle Divs</button>
+
+    		<div class="color-box">This is the first DIV element</div>
+    		<div class="color-box">This is the second DIV element</div>
+	</body>
+</html>

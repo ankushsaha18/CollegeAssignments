@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<title>Q5</title>
+    		<script src="jQuery.js"></script>
+		<script>
+        		$(document).ready(function() {
+            			$("#ap").click(function() {
+                			$("ul").append("<li>CSS</li>");
+            			});
+            			$("#pr").click(function() {
+                			$("ul").prepend("<li>Introduction to Full Stack Development</li>");
+            			});
+            			$("#hd").click(function() {
+                			$("ul").before("<h1>List of Topics Covered</h1>");
+            			}); 
+            			$("#upd").click(function() {
+                			$("ul").after("<p>Topics Updated</p>");
+            			});
+        		});
+    		</script>
+    		<style>
+			
+            	</style>
+	</head>
+	<body>
+		<ul>
+			<li>Getting Started with Full Stack</li>
+			<li>HTML</li>
+			<li>CSS</li>
+		</ul>
+		<button id="ap">Click to append to list</button>
+		<button id="pr">Click to prepend to list</button>
+		<button id="hd">Click to add Heading</button>
+		<button id="upd">Update</button>
+   	</body>
+</html>

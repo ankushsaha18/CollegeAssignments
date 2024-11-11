@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<title>Q8</title>
+    		<script src="jQuery.js"></script>
+		<script>
+        		$(document).ready(function() {
+            			$("#removeButton").click(function() {
+                				$('#' + $("#idInput").val()).remove();
+           	 		});
+        		});
+    		</script>
+    		<style>
+        		#content {
+            			margin: 20px;
+        		}
+    		</style>
+	</head>
+	<body>
+    		<div id="controls">
+        		<input type="text" id="idInput" placeholder="Enter ID to remove">
+        		<button id="removeButton">Remove</button>
+    		</div>
+    		<div id="content">
+        		<p id="para1">My Id is para1</p>
+        		<p id="para2">My Id is para2</p>
+        		<p id="para3">My Id is para3</p>
+        		<p id="para4">My Id is para4</p>
+        		<p id="para5">My Id is para5</p>
+    		</div>
+	</body>
+</html>
