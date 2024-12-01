@@ -5,7 +5,6 @@
         <style>
             .dropdown {
                 position: relative;
-                display: inline-block;
             }
 
             .dropdown-content {
@@ -17,22 +16,22 @@
             .dropdown:hover .dropdown-content {
                 display: block;
             }
-            .dropdown-content p {
+            .dropdown-content a {
                 margin: 10px;
                 padding: 12px 16px;
                 text-decoration: none;
                 display: block;
             }
-            .dropdown-content p:nth-child(n) {
+            .dropdown-content a:nth-child(n) {
                 font-family: Arial;
                 background-color: pink;
             }
-            .dropdown-content p:nth-child(2n) {
+            .dropdown-content a:nth-child(2n) {
                 font-family: Cambria;
                 font-size: 15px;
                 background-color: lawngreen;
             }
-            .dropdown-content p:nth-child(3n) {
+            .dropdown-content a:nth-child(3n) {
                 color: brown;
                 background-color: lightblue;
             }
@@ -42,9 +41,9 @@
         <div class="dropdown">
             <button>Hover over me</button>
             <div class="dropdown-content">
-                <p>Option 1</p>
-                <p>Option 2</p>
-                <p>Option 3</p>
+                <a>Option 1</a>
+                <a>Option 2</a>
+                <a>Option 3</a>
             </div>
         </div>
     </body>
