@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <style>
+        .thumbnail{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("img").addClass("rounded-circle");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="col-4">
+                <img class="thumbnail" src="https://th.bing.com/th/id/OIP.QKH6dS_lQblITciqfpAttwHaE7?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+            </div>
+            <div class="col-4">
+                <img class="thumbnail" src="https://th.bing.com/th/id/OIP.2cmHJbQTR9zya0K1cnP_xAHaEo?w=253&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+            </div>
+            <div class="col-4">
+                <img class="thumbnail" src="https://th.bing.com/th/id/OIP.LLA12kAZwvE_nIycIygbCgAAAA?w=280&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+            </div>
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary">Click for Circular Images</button>
+    </div>
+</body>
+</html>
