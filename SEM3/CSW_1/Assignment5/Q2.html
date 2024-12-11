@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <script src="jQuery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".edit-btn").click(function(){
+                var newName = prompt("Edit Name:");
+                var newAge = prompt("Edit Age:");
+                var newSemester = prompt("Edit Semester:");
+                var newRegNumber = prompt("Edit Registration Number:");
+                const row = $(this).closest("tr");
+                row.find("td:eq(0)").text(newName);
+                row.find("td:eq(1)").text(newAge);
+                row.find("td:eq(2)").text(newSemester);
+                row.find("td:eq(3)").text(newRegNumber);
+            });
+            $(".delete-btn").click(function(){
+                $(this).closest("tr").remove();
+            });
+        });
+    </script>
+    <style>
+        body{
+            font-family: cursive;
+        }
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: auto;
+            text-align: center;
+        }
+        th, td {
+            padding: 15px;
+            border: 2px solid #3f3e3e;
+        }
+        tr:nth-child(even) {
+            background-color: #fff29c;
+        }
+        tr:nth-child(odd) {
+            background-color: #9cffc0;
+        }
+        th{
+            background-color: #6aa3f8;
+        }
+        .edit-btn {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+        .delete-btn {
+            background-color: #f44336;
+            border-radius: 5px;
+        }
+        .edit-btn:hover, .delete-btn:hover {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Student Information</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Semester</th>
+            <th>Registration Number</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>Ankush Saha</td>
+            <td>19</td>
+            <td>3</td>
+            <td>2341019012</td>
+            <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Shivam Mishra</td>
+            <td>18</td>
+            <td>1</td>
+            <td>244102E1A2</td>
+            <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Shivani Sharma</td>
+            <td>21</td>
+            <td>5</td>
+            <td>2241008792</td>
+            <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

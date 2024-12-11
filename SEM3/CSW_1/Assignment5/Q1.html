@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <script src="jQuery.js"></script>
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/;
+            if (!regex.test(password)) {
+                $(".error").text("Password must contain at least one uppercase letter, one lowercase letter, and one digit.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <style>
+        body{
+            font-family:cursive;
+        }
+        h1,h2,p{
+            text-align: center;
+        }
+        .login-form {
+            background-color: rgb(229, 250, 229);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid rgb(73, 155, 106);
+            width: 500px;
+            margin: auto;
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the School Management System</h1>
+    <p>Please login to access the system</p>
+
+    <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validatePassword()" action="Q3.html">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Your Username" required><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Your Password" required><br>
+            <span class="error"></span><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
