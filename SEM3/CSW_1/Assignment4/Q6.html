@@ -8,29 +8,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    
+    <style>
+        #progressContainer{
+            display: none;
+        }
+    </style>
     <script>
         $(document).ready(function () {
             $("#uploadBtn").click(function () {
-                $("#progressContainer").removeClass("d-none");
-                const progressBars = $(".progress-bar");
-                function fillProgressBar(index) {
-                    if (index >= progressBars.length) {
-                        return;
-                    }
-                    const $bar = $(progressBars[index]);
-                    let progress = 0;
-                    const interval = setInterval(function () {
-                        progress += 1;
-                        $bar.css("width", progress + "%");
-
-                        if (progress >= 100) {
-                            clearInterval(interval);
-                            fillProgressBar(index + 1);
-                        }
-                    }, 100);
-                }
-                fillProgressBar(0);
+                $("#progressContainer").fadeIn();
+                $("#1").animate({width:"100%"},10000,function(){
+                    $("#2").animate({width:"100%"},10000,function(){
+                        $("#3").animate({width:"100%"},10000,function(){
+                            $("#4").animate({width:"100%"},10000);
+                        });
+                    });
+                });
             });
         });
     </script>
@@ -38,22 +31,22 @@
 <body>
     <div class="container mt-5">
         <h2 class="mb-4 text-center">Animated Progress Bars</h2>
-        <button id="uploadBtn" class="btn btn-primary btn-lg btn-block mb-4">Upload File</button>
+        <button id="uploadBtn" class="btn btn-primary btn-lg mb-4">Upload File</button>
 
-        <div id="progressContainer" class="d-none">
+        <div id="progressContainer">
             <div class="progress mb-3">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 0%;">
+                <div id="1" class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 0%;">
                 </div>
             </div>
             <div class="progress mb-3">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 0%;">
+                <div id="2" class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 0%;">
                 </div>
             </div>
             <div class="progress mb-3">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 0%;">
+                <div id="3" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 0%;">
                 </div>
             </div>
-            <div class="progress mb-3">
+            <div id="4" class="progress mb-3">
                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 0%;">
                 </div>
             </div>
