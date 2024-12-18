@@ -34,7 +34,7 @@ public class Q7 {
             x <<= 1;
             y >>= 1;
         }
-        return ans*sign;
+        return (sign == -1)? bitwiseAdd(~ans,1) : ans;
     }
     public static int bitwiseAdd(int a,int b){
         while (b != 0){

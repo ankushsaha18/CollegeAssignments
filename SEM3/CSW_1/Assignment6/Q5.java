@@ -24,7 +24,7 @@ public class Q5 {
             x <<= 1; // double the value of x
             y >>= 1; // half the value of y
         }
-        return sign*ans;
+        return (sign == -1)? bitwiseAdder(~ans,1) : ans;
     }
     public static int bitwiseAdder(int a,int b){
         while (b != 0){

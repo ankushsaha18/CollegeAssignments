@@ -25,7 +25,7 @@ public class Q6 {
             ans = bitwiseAdder(ans,(1<<cnt));
             x = bitwiseSubtract(x,(y << cnt));
         }
-        return sign*ans;
+        return (sign == -1)? bitwiseAdder(~ans,1) : ans;
     }
     public static int bitwiseAdder(int a,int b){
         while (b != 0){
