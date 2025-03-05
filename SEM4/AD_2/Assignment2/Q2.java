@@ -1,55 +1,62 @@
 package Assignment2;
 
-import java.util.*;
+
+// Rabin-Karp String matching algorithm  -->  Average = O(m+n)
+//                                            Worst = O(m*n)
+
 
 public class Q2 {
-    public static void main(String[] args) {
-        int V = 5;
-        int[][] edges = {
-                {1, 5, 2}, {1, 2, 5}, {1, 4, 2}, {5, 3, 7}, {2, 4, 2}, {2, 3, 1}
-        };
+    private static final int PRIME = 101;
 
-        List<List<List<Integer>>> adj = new ArrayList<>();
-        for (int i = 0; i <= V; i++) {
-            adj.add(new ArrayList<>());
+    // Method to implement Rabin-Karp string matching algorithm
+    public static void rabinKarpMatch(String text, String pattern) {
+        int textLength = text.length();
+        int patternLength = pattern.length();
+        int patternHash = 0, textHash = 0, h = 1;
+        boolean found = false;
+
+        // Compute the hash value of pattern and first window of text
+        for (int i = 0; i < patternLength - 1; i++) {
+            h = (h * 256) % PRIME;
+        }
+        for (int i = 0; i < patternLength; i++) {
+            patternHash = (256 * patternHash + pattern.charAt(i)) % PRIME;
+            textHash = (256 * textHash + text.charAt(i)) % PRIME;
         }
 
-        for (int[] edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-            int wt = edge[2];
-
-            adj.get(u).add(Arrays.asList(v, wt));
-            adj.get(v).add(Arrays.asList(u, wt));
-        }
-
-        System.out.println("Minimum Weight = " + spanningTree(V, adj));
-    }
-    public static int spanningTree(int V, List<List<List<Integer>>> adj) {
-        int sum = 0;
-
-        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
-        boolean[] visited = new boolean[V+1];
-
-        pq.add(new int[]{0,1}); // first node format {weight,node}
-
-        while (!pq.isEmpty()){
-            int[] a = pq.poll();
-            int wt = a[0];
-            int node = a[1];
-
-            if(visited[node]) continue;
-
-            sum += wt;
-            visited[node] = true;
-            for(List<Integer> lst : adj.get(node)){
-                int adj_node = lst.get(0);  // adj list given in format {node,weight}
-                int adj_wt = lst.get(1);
-                if(!visited[adj_node]){
-                    pq.add(new int[]{adj_wt,adj_node});
+        // Slide the pattern over text one by one
+        for (int i = 0; i <= textLength - patternLength; i++) {
+            if (patternHash == textHash) {
+                int j;
+                for (j = 0; j < patternLength; j++) {
+                    if (text.charAt(i + j) != pattern.charAt(j)) {
+                        break;
+                    }
+                }
+                if (j == patternLength) {
+                    System.out.println("Pattern found at index: " + i);
+                    found = true;
+                }
+            }
+            if (i < textLength - patternLength) {
+                textHash = (256 * (textHash - text.charAt(i) * h) + text.charAt(i + patternLength)) % PRIME;
+                if (textHash < 0) {
+                    textHash += PRIME;
                 }
             }
         }
-        return sum;
+        if (!found) {
+            System.out.println("Pattern not found in the text.");
+        }
+    }
+
+    public static void main(String[] args) {
+        String text = "ABAAABCDBBABCDDEBCABC";
+        String pattern = "ABC";
+
+        System.out.println("Text: " + text);
+        System.out.println("Pattern: " + pattern);
+
+        rabinKarpMatch(text,pattern);
     }
 }
