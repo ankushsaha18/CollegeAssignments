@@ -16,8 +16,8 @@ public class Magazine extends LibraryResource{
     }
 
     public void displayDetails(){
-        System.out.println("Book Title: " + this.getTitle());
-        System.out.println("Book Author: " + this.getAuthor());
+        System.out.println("Magazine Title: " + this.getTitle());
+        System.out.println("Magazine Author: " + this.getAuthor());
         System.out.println("Issue Date: " + this.issueDate);
     }
 }

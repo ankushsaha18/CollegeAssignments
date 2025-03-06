@@ -16,8 +16,8 @@ public class DVD extends LibraryResource{
     }
 
     public void displayDetails(){
-        System.out.println("Book Title: " + this.getTitle());
-        System.out.println("Book Author: " + this.getAuthor());
+        System.out.println("DVD Title: " + this.getTitle());
+        System.out.println("DVD Author: " + this.getAuthor());
         System.out.println("Duration: " + this.duration);
     }
 }
