@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Q3 {
     public static void main(String[] args) {
         int[] k = {24,39,46,75,92,32,95};
+        System.out.println("Hashed Values ---");
         System.out.println(Arrays.toString(linearProbing(k)));
     }
     public static int[] linearProbing(int[] k){

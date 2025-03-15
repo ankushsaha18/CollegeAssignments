@@ -1,4 +1,4 @@
-package com.collections_generics;
+package ClassWork2.class_2;
 
 public class Book {
     private String bookTitle;

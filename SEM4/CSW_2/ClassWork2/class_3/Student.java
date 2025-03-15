@@ -1,39 +1,49 @@
-package com.collections_generics;
+package ClassWork2.class_3;
 
-import java.util.Comparator;
 
-public class Student implements Comparable<Student> {
-    private String name;
+public class Student implements Comparable<Student>{
     private int roll;
-    public Student(){
+    private String name;
+    public Student(int roll,String name){
         super();
-    }
-    public Student(String name,int roll){
-        this.name = name;
         this.roll = roll;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", roll=" + roll +
-                '}';
-    }
-
-    public String getName() {
-        return name;
+        this.name = name;
     }
 
     public int getRoll() {
         return roll;
     }
+    public String getName() {
+        return name;
+    }
 
     @Override
+    public String toString() {
+        return roll + " " + name;
+    }
+
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if(o == null){
+            return false;
+        }
+        if(this.getClass() != o.getClass()){
+            return false;
+        }
+        Student s2 = (Student) o;
+        if(this.getRoll() == s2.getRoll() && this.getName().equals(s2.getName())){
+            return true;
+        }
+        return false;
+    }
+
     public int compareTo(Student o){
-        if(this.roll < o.roll){
+        if(this.getRoll() < o.getRoll()){
             return -1;
-        }else if(this.roll > o.roll){
+        }
+        if(this.getRoll() > o.getRoll()){
             return 1;
         }
         return 0;
