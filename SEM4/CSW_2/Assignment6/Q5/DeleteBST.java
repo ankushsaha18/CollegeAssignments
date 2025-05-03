@@ -1,13 +1,7 @@
 package Assignment6.Q5;
 
 public class DeleteBST {
-    static class Node{
-        int info;
-        Node left,right;
 
-        public Node(int info) {
-            this.info = info;
-        }
     }
 
     public static Node delete(Node root,int val){
