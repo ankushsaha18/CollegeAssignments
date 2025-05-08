@@ -28,7 +28,7 @@ public class Graph {
     public void display(){
         System.out.println("Adjacency Matrix ---");
         for(int i = 1 ; i <= V ; i++){
-            for(int j = 1 ; j < V ; j++){
+            for(int j = 1 ; j <= V ; j++){
                 System.out.print(adj_matrix[i][j] + " ");
             }
             System.out.println();

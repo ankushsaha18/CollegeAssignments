@@ -1,5 +1,6 @@
 package Assignment6.Q8;
 
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -19,7 +20,7 @@ public class GraphBFS {
     }
     public void BFS(int s) {
         boolean[] visited = new boolean[V];
-        Queue<Integer> queue = new LinkedList<>();
+        Queue<Integer> queue = new ArrayDeque<>();
         visited[s] = true;
         queue.add(s);
         while (!queue.isEmpty()) {
