@@ -8,9 +8,9 @@ public class DaysBetweenDates {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the start date (YYYY-MM-DD): ");
-        LocalDate startDate = LocalDate.parse(sc.nextLine());
+        LocalDate startDate = LocalDate.parse(sc.next());
         System.out.print("Enter the end date (YYYY-MM-DD): ");
-        LocalDate endDate = LocalDate.parse(sc.nextLine());
+        LocalDate endDate = LocalDate.parse(sc.next());
         long daysBetween = ChronoUnit.DAYS.between(startDate, endDate);
         System.out.println("Number of days between the two dates: " + daysBetween);
     }

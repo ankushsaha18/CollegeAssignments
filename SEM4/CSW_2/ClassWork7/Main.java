@@ -17,13 +17,16 @@ class Student{
     public int getMarks() {
         return marks;
     }
+    public String getName() {
+        return name;
+    }
 }
 public class Main {
     public static void main(String[] args) {
         ArrayList<Student> list = new ArrayList<>();
         Supplier<Student> s = () -> {
             Scanner sc = new Scanner(System.in);
-            System.out.println("Enter student details: ");
+            System.out.print("Enter student details: ");
             return new Student(sc.nextInt(),sc.next(),sc.nextInt());
         };
         list.add(s.get());
@@ -45,7 +48,7 @@ public class Main {
             return "failed";
         };
         Consumer<Student> c = stud ->{
-            System.out.println(stud + " has secured " + f.apply(stud));
+            System.out.println(stud.getName() + " has secured " + f.apply(stud));
         };
         for(Student stud : list) {
             c.accept(stud);

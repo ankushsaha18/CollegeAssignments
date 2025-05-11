@@ -8,7 +8,7 @@ public class SimpleInterestCalculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the start date (yyyy-MM-dd): ");
-        LocalDate startDate = LocalDate.parse(sc.nextLine());
+        LocalDate startDate = LocalDate.parse(sc.next());
         LocalDate currentDate = LocalDate.now();
         long daysBetween = ChronoUnit.DAYS.between(startDate, currentDate);
         System.out.print("Enter the initial amount: ");
@@ -17,7 +17,7 @@ public class SimpleInterestCalculator {
         double timeInYears = daysBetween / 365.0;
         double interest = (principal * intRate * timeInYears) / 100;
         double totalAmount = principal + interest;
-        System.out.printf("Interest accrued: %.2f%n", interest);
-        System.out.printf("Total amount after interest: %.2f%n", totalAmount);
+        System.out.println("Interest accrued: " + interest);
+        System.out.println("Total amount after interest: " + totalAmount);
     }
 }
