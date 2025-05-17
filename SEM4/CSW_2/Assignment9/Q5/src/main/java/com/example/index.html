@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Employee Form</title></head>
+<body>
+<h2>Enter Employee Details</h2>
+<form action="#" th:action="@{/addEmployee}" th:object="${employee}" method="post">
+    Emp ID: <input type="text" th:field="*{empid}" /><br/>
+    Name: <input type="text" th:field="*{name}" /><br/>
+    Age: <input type="text" th:field="*{age}" /><br/>
+    Salary: <input type="text" th:field="*{salary}" /><br/>
+    <button type="submit">Submit</button>
+</form>
+<h2>All Employees</h2>
+<table border="1">
+    <tr><th>ID</th><th>Name</th><th>Age</th><th>Salary</th></tr>
+    <tr th:each="emp : ${employees}">
+        <td th:text="${emp.empid}"></td>
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.age}"></td>
+        <td th:text="${emp.salary}"></td>
+    </tr>
+</table>
+</body>
+</html>

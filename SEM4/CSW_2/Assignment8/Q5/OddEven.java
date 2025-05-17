@@ -38,8 +38,8 @@ public class OddEven {
     public static void main(String[] args) {
         int limit = 10;
         Number num = new Number(limit);
-        Thread oddThread = new Thread(num::printOdd);
-        Thread evenThread = new Thread(num::printEven);
+        Thread oddThread = new Thread(() -> num.printOdd());
+        Thread evenThread = new Thread(() -> num.printEven());
         oddThread.start();
         evenThread.start();
     }

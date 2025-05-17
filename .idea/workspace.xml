@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96670125-f3ee-4333-bac9-257c5496e958" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/Assignment8/Q2/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/Assignment8/Q2/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/Assignment8/Q3/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/Assignment8/Q3/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/Assignment8/Q5/OddEven.java" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/Assignment8/Q5/OddEven.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/AdditionThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/AdditionThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/DivisionThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/DivisionThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/MultiplicationThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/MultiplicationThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/SubtractionThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q2/SubtractionThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q3/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q3/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q5/OddEven.class" beforeDir="false" afterPath="$PROJECT_DIR$/SEM4/CSW_2/out/production/CSW_2/Assignment8/Q5/OddEven.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ankushsaha18"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ankushsaha18/CollegeAssignments.git",
+    "accountId": "646a17db-15f0-42f7-a767-25e909cfce8b"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2xD9SY3SCxep2lb3PcgyZSUB6Bq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/ankushsaha/Documents/Github/CollegeAssignments",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96670125-f3ee-4333-bac9-257c5496e958" name="Changes" comment="" />
+      <created>1747461778322</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747461778322</updated>
+    </task>
+    <servers />
+  </component>
+</project>

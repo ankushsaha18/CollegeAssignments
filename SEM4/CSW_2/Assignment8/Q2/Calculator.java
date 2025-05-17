@@ -6,7 +6,7 @@ class AdditionThread extends Thread {
         this.a = a; this.b = b;
     }
     public void run() {
-        System.out.println("Addition: " + " = " + (a + b));
+        System.out.println("Addition = " + (a + b));
     }
 }
 class SubtractionThread extends Thread {
@@ -15,7 +15,7 @@ class SubtractionThread extends Thread {
         this.a = a; this.b = b;
     }
     public void run() {
-        System.out.println("Subtraction: " + a + " = " + (a - b));
+        System.out.println("Subtraction = " + (a - b));
     }
 }
 class MultiplicationThread extends Thread {
@@ -24,7 +24,7 @@ class MultiplicationThread extends Thread {
         this.a = a; this.b = b;
     }
     public void run() {
-        System.out.println("Multiplication: "  + " = " + (a * b));
+        System.out.println("Multiplication = " + (a * b));
     }
 }
 class DivisionThread extends Thread {
@@ -33,11 +33,7 @@ class DivisionThread extends Thread {
         this.a = a; this.b = b;
     }
     public void run() {
-        if (b != 0) {
-            System.out.println("Division: " + " = " + ((double) a / b));
-        } else {
-            System.out.println("Division: Cannot divide by zero.");
-        }
+        System.out.println("Division = " + ((double) a / b));
     }
 }
 public class Calculator {
