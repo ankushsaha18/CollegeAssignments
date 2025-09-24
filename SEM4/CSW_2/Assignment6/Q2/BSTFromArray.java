@@ -13,14 +13,14 @@ class Node{
     }
 }
 public class BSTFromArray {
-    public static Node createArray(int[] values,int start,int end){
+    public static Node createTree(int[] values,int start,int end){
         if(start > end){
             return null;
         }
         int mid = (start + end)/2;
         Node node = new Node(values[mid]);
-        node.left = createArray(values,start,mid-1);
-        node.right = createArray(values,mid+1,end);
+        node.left = createTree(values,start,mid-1);
+        node.right = createTree(values,mid+1,end);
         return node;
     }
     public static void levelOrderTraversal(Node root) {
@@ -42,7 +42,7 @@ public class BSTFromArray {
 
     public static void main(String[] args) {
         int[] values = {0, 20, 30, 40, 50, 60, 70, 80, 90, 100};
-        Node root = createArray(values,0,values.length-1);
+        Node root = createTree(values,0,values.length-1);
         levelOrderTraversal(root);
     }
 }

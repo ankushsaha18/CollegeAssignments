@@ -1,9 +1,11 @@
 package Assignment4.Q5;
 
 public class MemoryUsage {
-    private int intVal; private double dblVal;
+    private int intVal;
+    private double dblVal;
     public MemoryUsage(int intVal, double dblVal) {
-        this.intVal = intVal; this.dblVal = dblVal;
+        this.intVal = intVal;
+        this.dblVal = dblVal;
     }
     public void setintVal(int intVal) {
         this.intVal = intVal;

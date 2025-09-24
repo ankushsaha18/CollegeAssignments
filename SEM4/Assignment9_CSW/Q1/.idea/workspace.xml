@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0256862-8c87-405a-9c25-98389208cc57" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../AD_2/LabExam/CycleDeetectDFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AD_2/LabExam/DistanceBFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AD_2/LabExam/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AD_2/LabExam/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CSW_2/EndSem/Q1/ComplexApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CSW_2/EndSem/Q2/FileOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CSW_2/EndSem/Q3/GraphApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CSW_2/EndSem/Q5/EmployeeApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CSW_2/EndSem/Q7/ArrayApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment6/Q2/BSTFromArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSW_2/Assignment6/Q2/BSTFromArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment8/Q1/MultiTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSW_2/Assignment8/Q1/MultiTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment8/Q5/OddEven.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSW_2/Assignment8/Q5/OddEven.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment8/Q6/BookingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSW_2/Assignment8/Q6/BookingApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/src/main/java/org/example/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/src/main/resources/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q1/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/src/main/java/org/example/Airtel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/src/main/java/org/example/Sim.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/src/main/java/org/example/Voda.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/src/main/resources/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q2/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/src/main/java/org/example/Bike.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/src/main/java/org/example/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/src/main/java/org/example/Transport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/src/main/java/org/example/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/src/main/resources/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q3/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/src/main/java/com/example/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/src/main/java/com/example/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/src/main/java/com/example/user-details.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/src/main/java/com/example/user-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/src/main/resources/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/src/main/resources/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q4/src/test/java/com/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/src/main/java/com/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/src/main/java/com/example/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/src/main/java/com/example/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/src/main/java/com/example/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/Assignment9/Q5/src/test/java/com/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment6/Q2/BSTFromArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment6/Q2/BSTFromArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment8/Q1/MultiplicationThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment8/Q1/MultiplicationThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment8/Q5/Number.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment8/Q5/Number.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment8/Q5/OddEven.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment8/Q5/OddEven.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment8/Q6/BookingApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSW_2/out/production/CSW_2/Assignment8/Q6/BookingApp.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ankushsaha18&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ankushsaha18/CollegeAssignments.git&quot;,
+    &quot;accountId&quot;: &quot;646a17db-15f0-42f7-a767-25e909cfce8b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2xDBBu5O9pTKfIXwf3dIGZAQLl6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.App.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/ankushsaha/Documents/Github/CollegeAssignments/SEM4/Assignment9_CSW/Q1",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0256862-8c87-405a-9c25-98389208cc57" name="Changes" comment="" />
+      <created>1747462631831</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747462631831</updated>
+    </task>
+    <servers />
+  </component>
+</project>

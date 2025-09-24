@@ -23,7 +23,7 @@ class MultiplicationThread extends Thread {
         for (int i = 1; i <= 10; i++) {
             System.out.println(number + " x " + i + " = " + (number * i));
             try {
-                Thread.sleep(15);
+                Thread.sleep(25);
             } catch (InterruptedException e) {
                 System.out.println("MultiplicationThread interrupted");
             }

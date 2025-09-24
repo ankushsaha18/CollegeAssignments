@@ -31,7 +31,7 @@ public class BookingApp {
         for (Object[] customer : customers) {
             String name = (String) customer[0];
             int seats = (int) customer[1];
-            Thread thread = new Thread(() -> bookingSystem.bookSeats(name, seats), name);
+            Thread thread = new Thread(() -> bookingSystem.bookSeats(name, seats));
             thread.start();
         }
     }

@@ -1,7 +1,8 @@
 package Assignment8.Q5;
 
 class Number {
-    private int num = 1; private final int limit;
+    private int num = 1;
+    private final int limit;
     public Number(int limit) {
         this.limit = limit;
     }

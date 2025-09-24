@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id = "model" class="org.example.Model">
+        <constructor-arg name="modelNo" value="1"/>
+        <constructor-arg name="noCylinders" value="4"/>
+    </bean>
+    <bean name="car" class="org.example.Car">
+        <property name="name" value="Toyota"/>
+        <property name="color" value="Red"/>
+        <property name="model" ref="model"/>
+    </bean>
+</beans>
