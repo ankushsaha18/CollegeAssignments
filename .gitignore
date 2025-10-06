@@ -13,7 +13,7 @@
 *.dSYM/
 
 # Ignore all files that do not have a dot in their name
-*.[^.]*  # careful: this ignores files with any single dot, may need refinement
+*.[^.]*  
 
 
 # Windows
