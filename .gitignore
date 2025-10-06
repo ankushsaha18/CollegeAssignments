@@ -1,0 +1,91 @@
+# =========================
+# Operating System Files
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =========================
+# IDEs
+# =========================
+# VSCode
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+*.ipr
+*.iws
+
+# =========================
+# Java
+# =========================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# Maven / Gradle
+target/
+build/
+*.log
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+*.egg-info/
+dist/
+build/
+*.log
+
+# =========================
+# C / C++ / Compiled files
+# =========================
+*.o
+*.obj
+*.so
+*.exe
+*.out
+*.dll
+*.a
+*.lib
+
+# =========================
+# Web / HTML / JS / CSS
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Miscellaneous
+# =========================
+*.swp
+*.swo
+*.bak
+*.tmp
