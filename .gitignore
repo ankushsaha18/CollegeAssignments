@@ -13,7 +13,9 @@
 *.dSYM/
 
 # Ignore all files that do not have a dot in their name
-*.[^.]*  
+SEM5/PPWC/*
+*.out
+*.exe
 
 
 # Windows
