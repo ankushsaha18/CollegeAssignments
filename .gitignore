@@ -1,10 +1,16 @@
 # =========================
 # Operating System Files
 # =========================
-# macOS
+# =========================
+# macOS / Debug files
+# =========================
 .DS_Store
+*.DS_Store?
 .AppleDouble
 .LSOverride
+
+# Debug symbol folders
+*.dSYM/
 
 # Windows
 Thumbs.db
