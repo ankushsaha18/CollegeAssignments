@@ -13,9 +13,7 @@
 *.dSYM/
 
 # Ignore all files that do not have a dot in their name
-SEM5/PPWC/*
-*.out
-*.exe
+
 
 
 # Windows
@@ -85,6 +83,22 @@ build/
 *.dll
 *.a
 *.lib
+
+# =========================
+# C Programs in SEM5/PPWC
+# =========================
+# Ignore compiled executables in SEM5/PPWC (files without extensions)
+SEM5/PPWC/Assignment0/[a-zA-Z]*
+SEM5/PPWC/ClassWork/[a-zA-Z]*
+
+# Exception: Allow specific file types
+!SEM5/PPWC/**/*.c
+!SEM5/PPWC/**/*.h
+!SEM5/PPWC/**/*.md
+!SEM5/PPWC/**/README*
+
+# Ignore debug symbol directories specifically
+SEM5/PPWC/**/*.dSYM/
 
 # =========================
 # Web / HTML / JS / CSS
