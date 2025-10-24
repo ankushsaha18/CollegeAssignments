@@ -1,6 +1,5 @@
 score = float(input("Enter your score (0–100): "))
 
-# Determine letter grade and comment
 if 90 <= score <= 100:
     grade = 'A'
     comment = 'Excellent'
@@ -20,7 +19,6 @@ else:
     grade = None
     comment = 'Invalid score!'
 
-# Output result
 if grade:
     print(f"Grade: {grade}")
     print(f"Comment: {comment}")
