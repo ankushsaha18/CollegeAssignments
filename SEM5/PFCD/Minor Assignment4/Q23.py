@@ -15,8 +15,8 @@ percentages = [v / total * 100 for v in values]
 
 bars = plt.bar(keys, values)
 
-for bar, pct in zip(bars, percentages):
-    plt.text(bar.get_x() + bar.get_width()/2, bar.get_height(), f'{pct:.0f}%', ha='center', va='bottom')
+for i in range(len(bars)):
+    plt.text(keys[i], values[i], f'{percentages[i]:.1f}%', ha='center', va='bottom')
 
 plt.xlabel('Response')
 plt.ylabel('Frequency')
