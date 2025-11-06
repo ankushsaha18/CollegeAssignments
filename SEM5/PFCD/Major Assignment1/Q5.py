@@ -53,7 +53,7 @@ def salary_bracket(gross_salary):
 def employee_report():
     employees = []
 
-    for i in range(3):
+    for i in range(1):
         print(f"\nEnter details for Employee {i+1}:")
         name = input("Enter Employee Name: ")
         rate = float(input("Enter Hourly Rate (₹): "))
@@ -75,11 +75,11 @@ def employee_report():
     print("\n" + "=" * 80)
     print(f"{'EMPLOYEE SALARY REPORT':^80}")
     print("=" * 80)
-    print(f"{'Name':<15}{'Basic Salary (₹)':<20}{'Gross Salary (₹)':<20}{'Tax (₹)':<10}{'Bracket'}")
+    print(f"{'Name':<15}{'Basic Salary (₹)':<20}{'Gross Salary (₹)':<20}{'Tax (₹)':<10}{'Bracket':>10}")
     print("-" * 80)
 
     for emp in employees:
-        print(f"{emp['Name']:<15}{emp['Basic']:<20.2f}{emp['Gross']:<20.2f}{emp['Tax']:<10.2f}{emp['Bracket']}")
+        print(f"{emp['Name']:<15}{emp['Basic']:<20.2f}{emp['Gross']:<20.2f}{emp['Tax']:<10.2f}{emp['Bracket']:>10}")
 
     print("=" * 80)
 
