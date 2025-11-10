@@ -12,4 +12,7 @@ int main(){
     return 0;
 }
 
-// 15 15
+/*
+p --> undefined behavior
+q --> 15
+*/
