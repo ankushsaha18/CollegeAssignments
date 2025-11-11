@@ -6,9 +6,9 @@ int main() {
     printf("Enter rows and cols: ");
     scanf("%d %d", &r, &c);
 
-    int **A = malloc(r * sizeof(int *));
+    int **A = (int **)malloc(r * sizeof(int *));
     for (i = 0; i < r; i++)
-        A[i] = malloc(c * sizeof(int));
+        A[i] = (int *)malloc(c * sizeof(int));
 
     printf("Enter elements: ");
     for (i = 0; i < r; i++)

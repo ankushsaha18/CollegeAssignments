@@ -20,3 +20,12 @@ int main(void){
 void sum(int a, int b, int *cp){
     *cp = a + b;
 }
+
+/*
+   x  y  z
+   7   2   9
+   7   2   9
+  11   2   9
+  18   2   9
+  18   4   9
+*/

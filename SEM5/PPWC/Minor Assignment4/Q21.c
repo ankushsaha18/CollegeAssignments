@@ -16,35 +16,13 @@ int main() {
 
     // total calls = (N-1)x(N-1)
 
-    arrange(&n1, &n2);
-    arrange(&n2, &n3);
-    arrange(&n3, &n4);
-    arrange(&n4, &n5);
-    arrange(&n5, &n6);
-
-    arrange(&n1, &n2);
-    arrange(&n2, &n3);
-    arrange(&n3, &n4);
-    arrange(&n4, &n5);
-    arrange(&n5, &n6);
-
-    arrange(&n1, &n2);
-    arrange(&n2, &n3);
-    arrange(&n3, &n4);
-    arrange(&n4, &n5);
-    arrange(&n5, &n6);
-
-    arrange(&n1, &n2);
-    arrange(&n2, &n3);
-    arrange(&n3, &n4);
-    arrange(&n4, &n5);
-    arrange(&n5, &n6);
-
-    arrange(&n1, &n2);
-    arrange(&n2, &n3);
-    arrange(&n3, &n4);
-    arrange(&n4, &n5);
-    arrange(&n5, &n6);
+    for(int i = 0 ; i < 5 ; i++){
+        arrange(&n1, &n2);
+        arrange(&n2, &n3);
+        arrange(&n3, &n4);
+        arrange(&n4, &n5);
+        arrange(&n5, &n6);
+    }
 
     printf("The numbers in ascending order are: %d %d %d %d %d %d\n", n1, n2, n3, n4, n5, n6);
 

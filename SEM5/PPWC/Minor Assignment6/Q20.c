@@ -11,5 +11,5 @@ int main(){
 }
 
 /*
-8 processes will be created.
+16 processes will be created.
 */
