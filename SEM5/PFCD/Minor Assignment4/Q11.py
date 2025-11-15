@@ -5,13 +5,13 @@ matrix = []
 for i in range(M):
     row = []
     for j in range(N):
-        val = input(f"Enter value for element ({i+1}, {j+1}): ")
+        val = int(input(f"Enter value for element ({i+1}, {j+1}): "))
         row.append(val)
     matrix.append(row)
 
 print("\nThe MxN list in tabular format:")
 for row in matrix:
-    print(" ".join(row))
+    print(" ".join(str(x) for x in row))
 
 '''
 Enter M: 3

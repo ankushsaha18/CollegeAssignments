@@ -1,10 +1,7 @@
 s = 'mississippi'
 letter_count = {}
 for char in s:
-    if char in letter_count:
-        letter_count[char] += 1
-    else:
-        letter_count[char] = 1
+    letter_count[char] = letter_count.get(char, 0) + 1
 
 print(letter_count)
 

@@ -1,4 +1,4 @@
-cube_dict = dict(map(lambda x: (x, x**3), range(1, 6)))
+cube_dict = dict((x,x**3) for x in range (1,6))
 print(cube_dict)
 
 '''

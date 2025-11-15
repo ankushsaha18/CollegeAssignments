@@ -1,7 +1,7 @@
 def gcd(a, b):
-    while b != 0:
-        a, b = b, a % b
-    return a
+    if b == 0:
+        return a
+    return gcd(b,a%b)
 
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))

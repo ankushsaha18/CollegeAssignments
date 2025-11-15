@@ -16,7 +16,7 @@ frequency = {}
 for num in data:
     frequency[num] = frequency.get(num, 0) + 1
 
-mode = max(frequency.values())
+mode = max(frequency, key=frequency.get)
 
 print("Data:", data)
 print("Mean:", mean)

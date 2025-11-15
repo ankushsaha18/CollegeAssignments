@@ -28,7 +28,7 @@ while True:
             if numbers:
                 pos = int(input("Enter position to insert: "))
                 val = int(input("Enter value to insert: "))
-                if 0 <= pos <= len(numbers):
+                if 0 < pos <= len(numbers):
                     numbers.insert(pos-1, val)
                     print("List:", numbers)
                 else:
@@ -39,7 +39,7 @@ while True:
         case 4:
             if numbers:
                 pos = int(input("Enter position to delete: "))
-                if 0 <= pos < len(numbers):
+                if 0 < pos < len(numbers):
                     removed = numbers.pop(pos-1)
                     print("List:", numbers)
                 else:

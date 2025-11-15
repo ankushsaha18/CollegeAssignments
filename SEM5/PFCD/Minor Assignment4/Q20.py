@@ -10,7 +10,6 @@ for i in range(1, 6):
 
 minimum = min(ratings)
 maximum = max(ratings)
-data_range = maximum - minimum
 mean = stats.mean(ratings)
 median = stats.median(ratings)
 mode = stats.mode(ratings)
@@ -20,7 +19,7 @@ std_dev = stats.stdev(ratings)
 
 print("\nMinimum:", minimum)
 print("Maximum:", maximum)
-print("Range:", data_range)
+print("Range:", minimum ,"-", maximum)
 print(f"Mean: {mean:.2f}")
 print("Median:", median)
 print("Mode:", mode)
@@ -39,7 +38,7 @@ Rating 5: 3
 
 Minimum: 1
 Maximum: 5
-Range: 4
+Range: 1 - 5
 Mean: 2.90
 Median: 3.0
 Mode: 3
