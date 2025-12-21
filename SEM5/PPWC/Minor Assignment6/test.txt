@@ -1,0 +1,6 @@
+This is a sample text file
+Used for testing grep command
+The grep command searches patterns
+This line does not match
+grep is very useful in UNIX
+Learning operating systems with C
