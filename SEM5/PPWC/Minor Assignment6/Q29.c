@@ -21,7 +21,7 @@ int main() {
         // PARENT PROCESS
         wait(&status);
 
-        printf("Parent Process\n");
+        printf("Parent Process: %d\n", getpid());
         printf("Child PID: %d\n", pid);
 
         if (WIFEXITED(status)) {

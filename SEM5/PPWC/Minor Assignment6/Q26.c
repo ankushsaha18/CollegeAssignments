@@ -51,27 +51,21 @@ void figure_b() {
 
     printf("\nFIGURE (b)\n");
     printf("P  -> PID=%d PPID=%d\n", getpid(), getppid());
-
     for (int i = 1; i <= 4; i++) {
-
-        if ((pid = fork()) == 0) {             // Main chain Ci
-            printf("C%d -> PID=%d PPID=%d\n", i, getpid(), getppid());
-
-            if ((pid = fork()) == 0) {         // Side child Si
-                printf("S%d -> PID=%d PPID=%d\n", i, getpid(), getppid());
-                return;
-            }
-            wait(NULL);
-        } else {
-            wait(NULL);
+        if((pid = fork()) == 0){
+            printf("Side child of P -> PID=%d PPID=%d\n", getpid(), getppid());
             return;
         }
+        if((pid = fork()) > 0){
+            break;
+        }
+        printf("P  -> PID=%d PPID=%d\n", getpid(), getppid());
     }
+    wait(NULL);
 }
 
 
 int main() {
-    figure_a();
     figure_b();
     return 0;
 }

@@ -1,13 +1,17 @@
 #include<stdio.h>
+#include<string.h>
+
 int check(char *str,char *sub){
     int i,j;
-    for(i=0;str[i]!='\0' || str[i]!='\n';i++){
-        for(j=0;sub[j]!='\0' || sub[j]!='\n';j++){
-            if(str[i+j]!=sub[j]){
+    int len1 = strlen(str);
+    int len2 = strlen(sub);
+    for(i=0;i<=len1-len2;i++){
+        for(j=0;j<len2;j++){
+            if(str[i+j] != sub[j]){
                 break;
             }
         }
-        if(sub[j]=='\0' || sub[j]=='\n'){
+        if(j == len2){
             return 1;
         }
     }

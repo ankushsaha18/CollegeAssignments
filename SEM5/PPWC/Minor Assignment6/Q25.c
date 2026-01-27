@@ -56,6 +56,7 @@ int main() {
 
     // Parent waits
     while (wait(NULL) > 0);
+    sleep(15);
     return 0;
 }
 
