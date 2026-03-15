@@ -1,10 +1,16 @@
-SFML_PATH = /opt/homebrew/Cellar/sfml/3.0.2
+SFML_PATH = /opt/homebrew/opt/sfml@2
 
-cppFileNames := $(shell find . -type f -name "*.cpp")
+SRC = $(shell find . -name "*.cpp")
 
-all: compile
+all: build run
 
-compile:
+build:
 	mkdir -p bin
-	g++ $(cppFileNames) -I$(SFML_PATH)/include -o bin/app -L$(SFML_PATH)/lib \
-	-lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network
+	clang++ -std=c++17 $(SRC) \
+	-I$(SFML_PATH)/include \
+	-L$(SFML_PATH)/lib \
+	-lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio \
+	-o bin/app
+
+run:
+	./bin/app
