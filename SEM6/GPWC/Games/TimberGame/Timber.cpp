@@ -2,6 +2,15 @@
 #include <sstream>
 using namespace sf;
 
+
+void updateBranches(int seed);
+const int NUM_BRANCHES = 6;
+Sprite branches[NUM_BRANCHES];
+
+enum class side {LEFT,RIGHT,NONE};
+
+side branchPosition[NUM_BRANCHES];
+
 int main() {
 	VideoMode vm(1920, 1080);
 	RenderWindow window(vm, "Timber!!");
@@ -79,6 +88,10 @@ int main() {
 	float timeRemaining = 6.0f;
 	float timeBarWidthPerSecond = timeBarStartWidth/timeRemaining;
 	
+	// prepare 6 branches
+	Texture textureBranch;
+	textureBranch.loadFromFile("graphics/branch.png");
+	
 	// pause variable
 	bool paused = true;
 	
@@ -117,11 +130,25 @@ int main() {
 		}
 		if (Keyboard::isKeyPressed(Keyboard::Return)){
 			paused = false;
+			
+			// reset for new game
+			score = 0;
+			timeRemaining = 6;
 		}
 		if(!paused){
 			// Measure time
 			Time dt = clock.restart();
-
+            timeRemaining -= dt.asSeconds();
+            timeBar.setSize(Vector2f(timeBarWidthPerSecond*timeRemaining,timeBarHeight)); // set height and width of a rectangle
+            if(timeRemaining  <= 0) {
+            	paused = true;
+            	messageText.setString("Out of time !!");
+            	FloatRect textRect = messageText.getLocalBounds();
+				messageText.setOrigin(textRect.left + textRect.width/2.0f,textRect.top + textRect.height/2.0f);
+				messageText.setPosition(1920/2.0f,1080/2.0f);
+				scoreText.setPosition(20,20);
+            }
+            
 			// Bee Movement
 			if(!beeActive){
 				srand((int)time(0));//access the the current time
