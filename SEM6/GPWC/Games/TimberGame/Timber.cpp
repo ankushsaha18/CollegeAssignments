@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <sstream>
 using namespace sf;
 
@@ -72,7 +73,6 @@ int main() {
 	textureRip.loadFromFile("graphics/rip.png");
 	Sprite spriteRip;
 	spriteRip.setTexture(textureRip);
-	spriteRip.setPosition(600,800);
 	
 
 	// Axe
@@ -146,10 +146,34 @@ int main() {
 	bool logActive = false;
 	float logSpeedX = 1000;
 	float logSpeedY = -1500;
+	bool acceptInput = false;
+	
+	// prepare sound
+	SoundBuffer chopBuffer;
+	chopBuffer.loadFromFile("sound/chop.wav");
+	Sound chop;
+	chop.setBuffer(chopBuffer);
+	
+	SoundBuffer deathBuffer;
+	deathBuffer.loadFromFile("sound/death.wav");
+	Sound death;
+	death.setBuffer(deathBuffer);
+	
+	SoundBuffer otBuffer;
+	otBuffer.loadFromFile("sound/out_of_time.wav");
+	Sound ot;
+	ot.setBuffer(otBuffer);
 	
 	
 	while (window.isOpen()) {
 		Event event;
+		
+		while (window.pollEvent(event)) {
+			if (event.type == Event::KeyReleased && !paused) {
+				acceptInput = true;
+				spriteAxe.setPosition(2000,spriteAxe.getPosition().y);	
+			}
+		}
 		while (window.pollEvent(event)) {
 			if (event.type == Event::Closed) {
 				window.close();
@@ -164,6 +188,52 @@ int main() {
 			// reset for new game
 			score = 0;
 			timeRemaining = 6;
+			
+			// Make branch disappear
+			for(int i = 1 ; i < NUM_BRANCHES ; i++){
+				branchPosition[i] = side::NONE;
+			}
+			
+			// hide Graveposition
+			spriteRip.setPosition(675,2000);
+			
+			// move player to original state
+			spritePlayer.setPosition(580,720);
+			acceptInput = true;
+		}
+		
+		if(acceptInput){
+			// handle right key
+			if(Keyboard::isKeyPressed(Keyboard::Right)){
+				PlayerSide = side::RIGHT;
+				score++;
+				timeRemaining += (2/score) + 0.15;
+				spriteAxe.setPosition(AXE_POSITION_RIGHT,spriteAxe.getPosition().y);
+				spritePlayer.setPosition(1227,720);
+				updateBranches(score);
+				spriteLog.setPosition(810,720);
+				logSpeedX = -5000;
+				logActive = true;
+				acceptInput = false;
+				
+				// player chop sound
+				chop.play();
+			}
+			if(Keyboard::isKeyPressed(Keyboard::Left)){
+				PlayerSide = side::LEFT;
+				score++;
+				timeRemaining += (2/score) + 0.15;
+				spriteAxe.setPosition(AXE_POSITION_LEFT,spriteAxe.getPosition().y);
+				spritePlayer.setPosition(580, 720);
+				updateBranches(score);
+				spriteLog.setPosition(810,720);
+				logSpeedX =  5000;
+				logActive = true;
+				acceptInput = false;
+				
+				// player chop sound
+				chop.play();
+			}
 		}
 		if(!paused){
 			// Measure time
@@ -177,6 +247,10 @@ int main() {
 				messageText.setOrigin(textRect.left + textRect.width/2.0f,textRect.top + textRect.height/2.0f);
 				messageText.setPosition(1920/2.0f,1080/2.0f);
 				scoreText.setPosition(20,20);
+				
+				// out of time sound
+				ot.play();
+				
             }
             
 			// Bee Movement
@@ -278,6 +352,33 @@ int main() {
 					branches[i].setPosition(3000,height);
 				}
 			}
+			
+			if(logActive){
+				spriteLog.setPosition(spriteLog.getPosition().x+(logSpeedX*dt.asSeconds()),spriteLog.getPosition().y+logSpeedY*dt.asSeconds());
+				if(spriteLog.getPosition().x < -100 || spriteLog.getPosition().x > 2000){
+					logActive = false;
+					spriteLog.setPosition(810,720);
+				}
+			}
+			
+			if(branchPosition[5] == PlayerSide){
+				// death
+				paused = true;
+				acceptInput = false;
+				// draw gravestone
+				spriteRip.setPosition(spritePlayer.getPosition().x,720);
+				spritePlayer.setPosition(2000,1000);
+				spriteAxe.setPosition(2000,1000);
+				spriteLog.setPosition(2000,1000);
+				messageText.setString("SQUISHED !!");
+            	FloatRect textRect = messageText.getLocalBounds();
+				messageText.setOrigin(textRect.left + textRect.width/2.0f,textRect.top + textRect.height/2.0f);
+				messageText.setPosition(1920/2.0f,1080/2.0f);
+				scoreText.setPosition(20,20);
+				
+				//death sound
+				death.play();
+			}
 		}
 
 		window.clear();
@@ -292,13 +393,13 @@ int main() {
 		window.draw(spriteBee);
 		window.draw(spritePlayer);
 		window.draw(spriteAxe);
-		window.draw(spriteRip);
 		window.draw(spriteLog);
 		window.draw(scoreText);
 		if(paused){
 			window.draw(messageText);
 		}
 		window.draw(timeBar);
+		window.draw(spriteRip);
 		window.display();
 	}
 	return 0;
