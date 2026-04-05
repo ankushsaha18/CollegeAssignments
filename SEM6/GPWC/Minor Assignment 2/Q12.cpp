@@ -1,13 +1,19 @@
 /*
 
-    RectangleShape rectangle;
+    Font font;
+    font.loadFromFile("KONIKAP.ttf");
 
-    rectangle.setSize(Vector2f(X, Y));
-    rectangle.setFillColor(Color::Red);
+    Text text;
+    text.setFont(font);
+    text.setString("SOA UNIVERSITY");
+    text.setCharacterSize(100);
+    text.setFillColor(Color::Red);
 
-    rectangle.setOrigin(X/2, Y/2);
-    rectangle.setPosition(960, 540);
+    FloatRect bounds = text.getLocalBounds();
 
-    window.draw(rectangle);
+    text.setOrigin(bounds.width / 2, bounds.height / 2);
+    text.setPosition(960, 540);
 
+    window.draw(text);
+    
 */
