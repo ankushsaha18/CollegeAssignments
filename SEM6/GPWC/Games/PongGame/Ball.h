@@ -20,6 +20,7 @@ class Ball{
 		void reboundSides();
 		void reboundBatOrTop();
 		void reboundBottom();
+		void increaseSpeed();
 		
 		void update(Time dt);
 };

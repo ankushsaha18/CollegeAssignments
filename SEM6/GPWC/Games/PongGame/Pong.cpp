@@ -16,7 +16,6 @@ int main(){
 	Ball ball(1920/2,0);
 	bool collision = false;
 	bool paused = true; // start paused
-	bool ballLost = false;
 	
 	Text hud;
 	Text messageText;
@@ -89,21 +88,14 @@ int main(){
 			Time dt = clock.restart();
 			bat.update(dt);
 			ball.update(dt);
-			std::stringstream ss;
-			ss << "score:" << score << " Lives:" << life;
-			hud.setString(ss.str());
 			
 			
 			// Hit bottom
-			if(ball.getPosition().top > 1080 && !ballLost){
-				ballLost = true;
+			if(ball.getPosition().top > 1080){
 				ball.reboundBottom();
 				life--;
-				if(life < 1){
-					score = 0;
-					life = 3;
+				if(life <= 0){
 					paused = true;
-					ballLost = false;
 					messageText.setString("KHEL KHATAM BETA !!");
 					FloatRect textRect = messageText.getLocalBounds();
 					messageText.setOrigin(textRect.left + textRect.width/2.0f,
@@ -112,11 +104,6 @@ int main(){
 					hud.setPosition(20,20);
 					over.play();
 				}
-			}
-
-			// Reset ballLost when ball is back in play (top of screen area)
-			if(ball.getPosition().top < 1080){
-				ballLost = false;
 			}
 			
 			// Hit top
@@ -140,9 +127,15 @@ int main(){
 			if(ball.getPosition().intersects(bat.getPosition()) && collision == false){
 				ball.reboundBatOrTop();
 				score++;
+				ball.increaseSpeed();
 				collision = true;
 			}
 		}
+
+		// Update the HUD text
+		std::stringstream ss;
+		ss << "score:" << score << " Lives:" << life;
+		hud.setString(ss.str());
 		
 		// Draw all
 		window.clear();

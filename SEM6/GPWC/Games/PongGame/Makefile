@@ -6,11 +6,11 @@ all: build run
 
 build:
 	mkdir -p bin
-	clang++ -std=c++17 $(SRC) \
-	-I$(SFML_PATH)/include \
-	-L$(SFML_PATH)/lib \
-	-lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio \
-	-o bin/app
+	clang++ -std=c++17 -w ./Bat.cpp ./Pong.cpp ./Ball.cpp \
+    -I/opt/homebrew/opt/sfml@2/include \
+    -L/opt/homebrew/opt/sfml@2/lib \
+    -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio \
+    -o bin/app
 
 run:
 	./bin/app

@@ -26,7 +26,6 @@ void Ball::reboundSides(){
 
 void Ball::reboundBatOrTop(){
 	m_DirectionY = - m_DirectionY;
-	m_Speed = m_Speed + m_Speed*0.1;
 }
 
 void Ball::reboundBottom(){
@@ -36,6 +35,10 @@ void Ball::reboundBottom(){
 	m_Speed = 1500.0f;
 	
 	m_DirectionY = -m_DirectionY;
+}
+
+void Ball::increaseSpeed(){
+	m_Speed = m_Speed + m_Speed*0.1;
 }
 
 void Ball::update(Time dt){
