@@ -1,10 +1,7 @@
-// if (logActive) {
-//     // Move the log
-//     logSprite.move(logSpeedX * dt.asSeconds(), logSpeedY * dt.asSeconds());
-
-//     // Check if log has gone off screen
-//     if (logSprite.getPosition().x > 2000 || logSprite.getPosition().x < -200) {
+// if (logActive){
+//     spriteLog.setPosition(spriteLog.getPosition().x + (logSpeedX * dt.asSeconds()), spriteLog.getPosition().y + logSpeedY * dt.asSeconds());
+//     if (spriteLog.getPosition().x < -100 || spriteLog.getPosition().x > 2000){
 //         logActive = false;
-//         logSprite.setPosition(810, 720); // Reset position
+//         spriteLog.setPosition(810, 720);
 //     }
 // }
