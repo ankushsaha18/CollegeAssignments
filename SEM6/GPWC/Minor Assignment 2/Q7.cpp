@@ -10,7 +10,7 @@ int main() {
     sprite.setTexture(texture);
 
     sprite.setScale(0.5f, 0.5f);
-    sprite.setPosition(480, 0);
+    sprite.setPosition((960 - sprite.getGlobalBounds().width) / 2, 0);
 
     while(window.isOpen())
     {

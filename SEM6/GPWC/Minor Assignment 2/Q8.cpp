@@ -10,11 +10,23 @@ int main() {
     sprite.setTexture(texture);
 
     sprite.setScale(0.5f, 0.5f);
-    sprite.setPosition(0, 270);
+    float y = (540 - sprite.getGlobalBounds().height) / 2;
+    float x = 0;
+    sprite.setPosition(x, y);
+    Clock clock;
 
-    while(window.isOpen())
+    while (window.isOpen())
     {
-        sprite.move(0.2f, 0);
+        Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == Event::Closed)
+                window.close();
+        }
+
+        Time dt = clock.restart();
+        x += 100 * dt.asSeconds();   
+        sprite.setPosition(x, y);
 
         window.clear();
         window.draw(sprite);
