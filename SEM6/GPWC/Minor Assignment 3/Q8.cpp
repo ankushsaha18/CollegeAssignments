@@ -1,21 +1,18 @@
-// Check collision between player and branch
-
-// if (playerSprite.getGlobalBounds().intersects(branchSprite.getGlobalBounds())) {
+// if (branchPosition[5] == PlayerSide){
+//     // death
 //     paused = true;
-//     gameOver = true;
+//     acceptInput = false;
+//     // draw gravestone
+//     spriteRip.setPosition(spritePlayer.getPosition().x, 720);
+//     spritePlayer.setPosition(2000, 1000);
+//     spriteAxe.setPosition(2000, 1000);
+//     spriteLog.setPosition(2000, 1000);
+//     messageText.setString("SQUISHED !!");
+//     FloatRect textRect = messageText.getLocalBounds();
+//     messageText.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
+//     messageText.setPosition(1920 / 2.0f, 1080 / 2.0f);
+//     scoreText.setPosition(20, 20);
 
-//     // Set up the game over message
-//     sf::Text messageText;
-//     messageText.setFont(font);
-//     messageText.setString("Player Expired-Game End");
-//     messageText.setCharacterSize(75);
-//     messageText.setFillColor(sf::Color::Red);
-
-//     // Center on screen
-//     sf::FloatRect textBounds = messageText.getLocalBounds();
-//     messageText.setOrigin(textBounds.width / 2, textBounds.height / 2);
-//     messageText.setPosition(1920 / 2, 1080 / 2);
-
-//     window.draw(messageText);
-//     window.display();
+//     // death sound
+//     death.play();
 // }
