@@ -1,15 +1,15 @@
-// Algorithmic steps — player presses Right key when `activeInput == true`
+// if (Keyboard::isKeyPressed(Keyboard::Right)) {
+//     PlayerSide = side::RIGHT;
+//     score++;
+//     timeRemaining += (2 / score) + 0.15;
+//     spriteAxe.setPosition(AXE_POSITION_RIGHT, spriteAxe.getPosition().y);
+//     spritePlayer.setPosition(1227, 720);
+//     updateBranches(score);
+//     spriteLog.setPosition(810, 720);
+//     logSpeedX = -5000;
+//     logActive = true;
+//     acceptInput = false;
 
-// 1. Check if activeInput == true
-// 2. Check if sf::Keyboard::isKeyPressed(sf::Keyboard::Right)
-// 3. If both true:
-//    a. Set player position to RIGHT side of tree
-//    b. Set player's facing direction to LEFT (towards tree)
-//    c. Set playerSide = right
-//    d. Increment score by 1
-//    e. Update score text display
-//    f. Call updateBranches() to shift branches down and add a new random branch at top
-//    g. Set logActive = true, set log direction to LEFT (flying away)
-//    h. Set activeInput = false (wait for key release before next chop)
-//    i. Play chop sound effect
-//    j. Check if new branch at player's side → if yes, trigger squash/game over
+//     // player chop sound
+//     chop.play();
+// }
