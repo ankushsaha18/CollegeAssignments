@@ -115,3 +115,10 @@ yarn-error.log*
 *.swo
 *.bak
 *.tmp
+
+venv/
+ml_env/
+tf_env/
+__pycache__/
+*.pyc
+.env
