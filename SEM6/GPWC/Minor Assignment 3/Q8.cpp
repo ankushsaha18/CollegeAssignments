@@ -1,18 +1,10 @@
-// if (branchPosition[5] == PlayerSide){
-//     // death
+// if (branchPositions[5] == playerSide){
 //     paused = true;
-//     acceptInput = false;
-//     // draw gravestone
-//     spriteRip.setPosition(spritePlayer.getPosition().x, 720);
-//     spritePlayer.setPosition(2000, 1000);
-//     spriteAxe.setPosition(2000, 1000);
-//     spriteLog.setPosition(2000, 1000);
-//     messageText.setString("SQUISHED !!");
+
+//     messageText.setString("Player Expired - Game End");
+
 //     FloatRect textRect = messageText.getLocalBounds();
 //     messageText.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
-//     messageText.setPosition(1920 / 2.0f, 1080 / 2.0f);
-//     scoreText.setPosition(20, 20);
 
-//     // death sound
-//     death.play();
+//     messageText.setPosition(960, 540); // center of 1920×1080 window
 // }
