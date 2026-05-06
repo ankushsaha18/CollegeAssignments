@@ -20,11 +20,9 @@ public:
     Bird() {
         if (!texture.loadFromFile("Assets/Bird.png"))
         cout << "Error loading Bird\n";
-
         sprite.setTexture(texture);
         sprite.setScale(0.2f, 0.2f);
         sprite.setPosition(100, 300);
-
         velocity = 0;
     }
 
@@ -70,7 +68,6 @@ public:
 
         topPipe.setPosition(x, height - 400);
         bottomPipe.setPosition(x, height + gap);
-
         passed = false;
     }
 
@@ -89,8 +86,7 @@ public:
     }
 
     bool collision(Sprite &bird) {
-        return topPipe.getGlobalBounds().intersects(bird.getGlobalBounds()) ||
-               bottomPipe.getGlobalBounds().intersects(bird.getGlobalBounds());
+        return topPipe.getGlobalBounds().intersects(bird.getGlobalBounds()) || bottomPipe.getGlobalBounds().intersects(bird.getGlobalBounds());
     }
 
     float getX() {
@@ -153,13 +149,10 @@ int main() {
 
     while (window.isOpen()) {
         float delta = clock.restart().asSeconds();
-
         Event event;
-
         while (window.pollEvent(event)) {
             if (event.type == Event::Closed)
                 window.close();
-
             if (event.type == Event::KeyPressed && event.key.code == Keyboard::Space) {
                 if (!gameOver)
                     bird.flap();
@@ -181,7 +174,6 @@ int main() {
         // spawn pipes
         if (!gameOver) {
             spawnTimer += delta;
-
             if (spawnTimer > spawnDelay) {
                 pipes.push_back(Pipe(500));
                 spawnTimer = 0;
@@ -193,11 +185,7 @@ int main() {
             p.update(delta, speed);
 
         // remove pipes
-        pipes.erase(remove_if(pipes.begin(), pipes.end(),
-                    [](Pipe &p) {
-                        return p.isOffScreen();
-                    }),
-                    pipes.end());
+        pipes.erase(remove_if(pipes.begin(), pipes.end(),[](Pipe &p) { return p.isOffScreen(); }), pipes.end());
 
         // collision
         for (auto &p : pipes) {
@@ -206,8 +194,7 @@ int main() {
         }
 
         // top and bottom collision
-        if (bird.getSprite().getPosition().y < 0 ||
-            bird.getSprite().getPosition().y > 650)
+        if (bird.getSprite().getPosition().y < 0 || bird.getSprite().getPosition().y > 650)
             gameOver = true;
 
         // scoring
@@ -221,11 +208,8 @@ int main() {
         // save high score
         if (gameOver && score > highScore) {
             highScore = score;
-
             ofstream out("score.txt");
-
             out << highScore;
-
             out.close();
         }
 
@@ -237,7 +221,6 @@ int main() {
 
         // draw
         window.clear(Color::White);
-
         window.draw(bird.getSprite());
 
         for (auto &p : pipes)
@@ -251,6 +234,5 @@ int main() {
 
         window.display();
     }
-
     return 0;
 }
