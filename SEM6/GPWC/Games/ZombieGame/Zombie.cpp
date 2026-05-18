@@ -1,194 +1,120 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <cstdlib>
-#include <ctime>
-#include<cmath>
-
-
+#include <cmath>
 using namespace sf;
+class Zombie {
+	private:
+		const float BLOATER_SPEED = 20;
+		const float CHASER_SPEED = 40;
+		const float CRAWLER_SPEED = 10;
 
-class Zombie
-{
-private:
-	// How fast is each zombie type?
-	const float BLOATER_SPEED = 40;
-	const float CHASER_SPEED = 80;
-	const float CRAWLER_SPEED = 20;
+		const float BLOATER_HEALTH = 5;
+		const float CHASER_HEALTH = 1;
+		const float CRAWLER_HEALTH = 3;
 
-	// How tough is each zombie type
-	const float BLOATER_HEALTH = 5;
-	const float CHASER_HEALTH = 1;
-	const float CRAWLER_HEALTH = 3;
+		Vector2f m_Position;
+		Sprite m_Sprite;
+		Texture m_Texture;
 
-	// Make each zombie vary its speed slightly
-	const int MAX_VARRIANCE = 30;
-	const int OFFSET = 101 - MAX_VARRIANCE;
+		float m_Speed;
+		float m_Health;
+		bool m_Alive = false;
 
-	// Where is this zombie?
-	Vector2f m_Position;
-
-	//Texture for zombie
-	Texture m_Texture;
-
-	// A sprite for the zombie
-	Sprite m_Sprite;
-
-	// How fast can this one run/crawl?
-	float m_Speed;
-
-	// How much health has it got?
-	float m_Health;
-
-	// Is it still alive?
-	bool m_Alive;
-
-	// Public prototypes go here	
-public:
-
-	// Handle when a bullet hits a zombie
-	bool hit();
-
-	// Find out if the zombie is alive
-	bool isAlive();
-
-	// Spawn a new zombie
-	void spawn(float startX, float startY, int type, int seed);
-
-	// Return a rectangle that is the position in the world
-	FloatRect getPosition();
-
-	// Get a copy of the sprite to draw
-	Sprite getSprite();
-
-	// Update the zombie each frame
-	void update(float elapsedTime, Vector2f playerLocation);
+	public:
+		FloatRect getPosition();
+		Sprite getSprite();
+		bool isAlive();
+		void spawn(float startX, float startY, int type, int seed);
+		void update(float elapsedTime, Vector2f playerLocation);
+		bool hit();
 };
 
-
-void Zombie::spawn(float startX, float startY, int type, int seed)
-{
-
-	switch (type)
-	{
-	case 0:
-		// Bloater
-		m_Texture.loadFromFile("graphics/bloater.png");
-		m_Sprite.setTexture(m_Texture);
-
-		m_Speed = 40;
-		m_Health = 5;
-		break;
-
-	case 1:
-		// Chaser
-		m_Texture.loadFromFile("graphics/chaser.png");
-		m_Sprite.setTexture(m_Texture);
-
-		m_Speed = 70;
-		m_Health = 1;
-		break;
-
-	case 2:
-		// Crawler
-		m_Texture.loadFromFile("graphics/crawler.png");
-		m_Sprite.setTexture(m_Texture);
-
-		m_Speed = 20;
-		m_Health = 3;
-		break;
-	}
-
-	// Modify the speed to make the zombie unique
-	// Every zombie is unique. Create a speed modifier
-	srand((int)time(0) * seed);
-	// Somewhere between 80 an 100
-	float modifier = (rand() % MAX_VARRIANCE) + OFFSET;
-	// Express as a fraction of 1
-	modifier /= 100; // Now equals between .7 and 1
-	m_Speed *= modifier;
-
-	m_Position.x = startX;
-	m_Position.y = startY;
-	m_Alive = true;
-
-	m_Sprite.setOrigin(25, 25);
-	m_Sprite.setPosition(m_Position);
-}
-
-bool Zombie::hit()
-{
-	m_Health--;
-
-	if (m_Health < 0)
-	{
-		// dead
-		m_Alive = false;
-		m_Texture.loadFromFile("graphics/blood.png");
-		m_Sprite.setTexture(m_Texture);
-		
-		return true;
-	}
-
-	// injured but not dead yet
-	return false;
-}
-
-bool Zombie::isAlive()
-{
-	return m_Alive;
-}
-
-FloatRect Zombie::getPosition()
-{
+FloatRect Zombie::getPosition(){ 
 	return m_Sprite.getGlobalBounds();
 }
 
-
-Sprite Zombie::getSprite()
-{
+Sprite Zombie::getSprite() {
 	return m_Sprite;
 }
 
-void Zombie::update(float elapsedTime,
-	Vector2f playerLocation)
-{
-	float playerX = playerLocation.x;
-	float playerY = playerLocation.y;
+bool Zombie::isAlive() {
+	return m_Alive;
+}
 
-	// Update the zombie position variables
-	if (playerX > m_Position.x)
-	{
-		m_Position.x = m_Position.x +
-			m_Speed * elapsedTime;
+void Zombie::spawn(float startX, float startY, int type, int seed) {
+	m_Position.x = startX;
+	m_Position.y = startY;
+
+	// m_Sprite.setPosition(m_Position);
+	m_Sprite.setOrigin(25, 25);
+
+	switch (type) {
+	case 0:
+		m_Texture.loadFromFile("graphics/bloater.png");
+		m_Sprite.setTexture(m_Texture);
+		m_Speed = BLOATER_SPEED;
+		m_Health = BLOATER_HEALTH;
+		m_Alive = true;
+		break;
+
+	case 1:
+		m_Texture.loadFromFile("graphics/chaser.png");
+		m_Sprite.setTexture(m_Texture);
+		m_Speed = CHASER_SPEED;
+		m_Health = CHASER_HEALTH;
+		m_Alive = true;
+		break;
+
+	case 2:
+		m_Texture.loadFromFile("graphics/crawler.png");
+		m_Sprite.setTexture(m_Texture);
+		m_Speed = CRAWLER_SPEED;
+		m_Health = CRAWLER_HEALTH;
+		m_Alive = true;
+		break;
 	}
 
-	if (playerY > m_Position.y)
-	{
-		m_Position.y = m_Position.y +
-			m_Speed * elapsedTime;
+	srand((int)time(0) * seed);
+	float modifier = (rand() % (101 - 70) + 70);
+	modifier = modifier / 100;
+	m_Speed = m_Speed * modifier;
+}
+
+void Zombie::update(float elapsedTime, Vector2f playerLocation) {
+	if (m_Alive) {
+		float playerX = playerLocation.x;
+		float playerY = playerLocation.y;
+
+		if (m_Position.x < playerX) {
+			m_Position.x = m_Position.x + m_Speed * elapsedTime;
+		}
+
+		if (m_Position.x > playerX) {
+				m_Position.x = m_Position.x - m_Speed * elapsedTime;
+		}
+
+		if (m_Position.y < playerY) {
+			m_Position.y = m_Position.y + m_Speed * elapsedTime;
+		}
+
+		if (m_Position.y > playerY) {
+			m_Position.y = m_Position.y - m_Speed * elapsedTime;
+		}
+
+		m_Sprite.setPosition(m_Position);
+		float angle = (atan2(playerY - m_Position.y, playerX - m_Position.x) * 180) / 3.141;
+		m_Sprite.setRotation(angle);
 	}
+}
 
-	if (playerX < m_Position.x)
-	{
-		m_Position.x = m_Position.x -
-			m_Speed * elapsedTime;
+bool Zombie::hit() {
+	m_Health--;
+	if (m_Health < 0) {
+		m_Alive = false;
+		m_Texture.loadFromFile("graphics/blood.png");
+		m_Sprite.setTexture(m_Texture);
+		return true;
 	}
-
-	if (playerY < m_Position.y)
-	{
-		m_Position.y = m_Position.y -
-			m_Speed * elapsedTime;
-	}
-
-	// Move the sprite
-	m_Sprite.setPosition(m_Position);
-
-	// Face the sprite in the correct direction
-	float angle = (atan2(playerY - m_Position.y,
-		playerX - m_Position.x)
-		* 180) / 3.141;
-
-	m_Sprite.setRotation(angle);
-
-
+	
+	return false;
 }
