@@ -1,0 +1,50 @@
+Router> enable
+configure terminal
+interface g0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+interface g0/1
+ip address 192.168.2.1 255.255.255.0
+no shutdown
+exit
+
+access-list 10 deny 192.168.1.11 0.0.0.0
+access-list 10 permit any
+
+interface g0/0
+ip access-group 10 in
+exit
+
+
+
+# PC0 → Ping Server → Should succeed
+# PC1 → Ping Server → Should fail
+
+
+
+access-list 100 permit tcp host 192.168.1.10 host 192.168.2.100 eq 80
+access-list 100 deny tcp host 192.168.1.11 host 192.168.2.100 eq 21
+access-list 100 permit ip any any
+
+interface g0/0
+no ip access-group 10 in
+ip access-group 100 in
+exit
+
+
+
+# Server -
+# Enable HTTP
+# Enable FTP
+
+# PC0 -> Open Web Browser → http://192.168.2.100 → Allowed
+
+# PC1 -> ftp 192.168.2.100 -> fail
+
+
+show access-lists
+
+show ip interface
+
+show running-config

@@ -1,0 +1,42 @@
+Router> enable
+configure terminal
+interface gig0/0
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+exit
+
+
+username CNSLAB privilege 15 password cnslab
+
+line vty 0 4
+login local
+transport input telnet
+
+service password-encryption
+
+enable secret class
+
+
+# op
+
+telnet 192.168.10.1
+
+
+
+
+# ssh
+
+hostname R1
+ip domain-name cnslab.com
+
+crypto key generate rsa
+
+ip ssh version 2
+line vty 0 4
+transport input ssh
+login local
+exit
+
+#op
+
+ssh -l CNSLAB 192.168.10.1

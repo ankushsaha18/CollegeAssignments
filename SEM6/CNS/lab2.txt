@@ -1,0 +1,68 @@
+Router> enable
+configure terminal
+interface g0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+
+# Click Server → Services → AAA
+# 2. Turn AAA service ON
+# 3. Set the following:
+
+# Add Router as Client: AAA server must trust the router before processing authentication requests.
+# Client Name: R1
+# Client IP: 192.168.1.1
+# Secret: cisco
+# ServerType: Radius
+# Add
+
+# Add User Credentials: These credentials will be used by remote users to log in.
+# Username: admin
+# Password: cisco123
+# Add
+
+
+
+Router> enable
+configure terminal
+aaa new-model
+
+radius-server host 192.168.1.2 key cisco
+
+aaa authentication login default group radius local
+
+username backup privilege 15 secret backup123
+
+ip domain-name lab.local
+
+hostname R1
+
+crypto key generate rsa
+
+
+
+# When prompted: How many bits? 1024
+
+
+
+ip ssh version 2
+
+line vty 0 4
+transport input ssh
+login authentication default
+exit
+
+end
+write memory
+
+
+# op
+
+ping 192.168.1.1
+
+ping 192.168.1.2
+
+ssh -l admin 192.168.1.1
+
+show ip ssh
+
