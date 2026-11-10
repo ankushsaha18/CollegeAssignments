@@ -1,0 +1,12 @@
+{
+  "input": "Artificial intelligence is becoming increasingly important in modern society. It helps businesses automate repetitive tasks, analyze large datasets, and support better decision making. In healthcare, AI can assist doctors by identifying patterns in medical images and predicting possible risks. In education, adaptive systems can provide learning material suited to a student's progress. However, AI systems must be developed responsibly. Training data can contain bias, and automated decisions may affect people unfairly when they are not carefully reviewed. Researchers, governments, and companies are therefore working on transparency, privacy, and accountability standards. Used thoughtfully, AI can complement human expertise and help solve complex problems.",
+  "summary": "Artificial intelligence is becoming increasingly important in modern society . It helps businesses automate repetitive tasks, analyze large datasets, and support better decision making . In healthcare, AI can assist doctors by identifying patterns in medical images and predicting possible risks .",
+  "input_word_count": 102,
+  "summary_word_count": 39,
+  "compression_ratio": 0.382,
+  "min_length": 40,
+  "max_length": 120,
+  "model": "sshleifer/distilbart-cnn-12-6",
+  "revision": "a4f8f3ea906ed274767e9906dbaede7531d660ff",
+  "inference_seconds": 1.5442
+}

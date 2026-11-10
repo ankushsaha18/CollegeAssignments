@@ -1,0 +1,17 @@
+[
+  {
+    "id": "responsible_ai",
+    "document": "Artificial intelligence is used in many areas of modern life. Businesses use it to automate routine work and analyze large amounts of information. Doctors can use AI systems to identify patterns in medical images, while teachers can use adaptive software to support students at different levels. These benefits also create responsibilities. Training data may contain bias, and automated decisions can be difficult to explain. Organizations should test systems carefully, protect personal information, and allow people to review important decisions. Clear rules for transparency and accountability can help technology support human expertise rather than replace judgment.",
+    "reference_summary": "AI can support work in business, healthcare, and education, but responsible use requires attention to bias, privacy, transparency, and human oversight."
+  },
+  {
+    "id": "renewable_energy",
+    "document": "Renewable energy comes from sources that naturally replenish, including sunlight, wind, water, and geothermal heat. Solar panels convert sunlight into electricity, and wind turbines generate electricity from moving air. These sources can reduce greenhouse gas emissions because they do not burn fossil fuels during operation. Their output can vary with weather and time of day, so electricity grids need storage, flexible generation, and stronger transmission systems. Batteries can store excess electricity for later use, while better grid connections can move power from regions with surplus generation to regions with demand. Governments and companies are investing in renewable energy to reduce pollution and improve long-term energy security.",
+    "reference_summary": "Solar, wind, and other renewable sources can cut emissions, but variable output requires energy storage, flexible grids, and investment in transmission."
+  },
+  {
+    "id": "digital_literacy",
+    "document": "Digital literacy means more than knowing how to use a phone or computer. It includes finding reliable information, protecting accounts, understanding privacy settings, and communicating respectfully online. Students and workers often encounter misleading headlines, altered images, and content designed to attract attention rather than inform. Checking an author, comparing several trusted sources, and looking for supporting evidence can reduce the chance of sharing false claims. Strong passwords and multi-factor authentication help protect personal accounts. Schools can teach these skills through practical activities that ask students to investigate claims, evaluate sources, and explain how they made decisions.",
+    "reference_summary": "Digital literacy combines effective technology use with source evaluation, privacy awareness, account security, and responsible online communication."
+  }
+]
