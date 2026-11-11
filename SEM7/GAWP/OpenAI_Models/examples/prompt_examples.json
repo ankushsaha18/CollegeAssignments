@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Explain a concept",
+    "instructions": "You are a patient tutor. Explain technical terms in plain language.",
+    "input": "Explain how a language model predicts text in three short steps."
+  },
+  {
+    "name": "Summarize for a reader",
+    "instructions": "Summarize only what is in the passage. If it does not say, do not infer it.",
+    "input": "Summarize this passage in two bullet points: [paste a short passage here]"
+  },
+  {
+    "name": "Structured extraction",
+    "instructions": "Return a JSON object with keys: task, audience, format. Do not add other keys.",
+    "input": "Create a beginner-friendly table comparing two renewable energy sources."
+  }
+]
